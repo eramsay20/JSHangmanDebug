@@ -29,9 +29,8 @@ Get into the habit of writing a README for every program you write. The more pra
 ## ChangeLog
 <!--  For each bug write the line number and a brief description 
 of the issue in your “Changelog”. -->
+Bugs summarized using the following format.... BUG: Location | Problem | Fix 
 
-1.  Location: Line 36
-    Problem: Missing = in const declaration
-    Fix: Added an equalizer between the const declaration and the following arrow function
+1.  BUG: Line 36 | Missing = in const declaration | Added an equalizer between the const declaration and the following arrow function
 
-2. 
+2. BUG: Line 94 | count+1 function missing a 2nd '+' character | Added second '+' symbol to correct the add count function
