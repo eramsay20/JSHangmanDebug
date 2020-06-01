@@ -100,11 +100,17 @@ const onLetterClick = (event) => {
 // This clears the board and sets up the game again
 const setupGame = () => {
     incorrectGuesses = 0;
-    document.getElementById('alphabet').html = '';
+    document.getElementById('alphabet').innerhtml = '';
     document.getElementById('word').innerHTML = '';
     drawHangman(incorrectGuesses);
     pickRandomWord();
-    generateLetter();
+    generateLetters();
+    
+    allButtons = document.querySelectorAll('button');
+    for ( i= 0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove('clicked');
+
+    }
 }
 
 // On each guess, this checks whether the word is complete
@@ -113,7 +119,7 @@ const checkForWin = () => {
     let word = document.getElementsByClassName('word-letter');
     for (let i = 0; i < word.length; i++) {
         // If any of the letters in the word are still blanks, leave the function
-        if (word(i).innerText === '_') {
+        if (word[i].innerText === '_') {
             return;
         }
     }
@@ -160,6 +166,12 @@ const drawHangman = (guesses) => {
                 break;
             case 8:
                 drawRightLeg(ctx);
+                setTimeout(() => {
+                    let playAgainLoss = confirm('You lost the game... Play again?');
+                        if (playAgainLoss) {
+                               setupGame();
+                            }
+                    }, 500);
                 break;
             default:
                 break;

@@ -54,4 +54,13 @@ Bugs summarized using the following format.... BUG: Location | Problem | Fix
 
 10. Bug Fix: Line 95 | handleIncorrectGuess(incorrectGuesses) is not a defined function, should be drawHangman, which is called after every incorrect guess | switched "handleIncorrectGuess" with "drawHangman"
 
+11. BUG FIX: Line 116 |  "if (word(i).innerText === '_')" should refer to word array item "i" as word[i].innerText  | replaced "word(i)" with word[i]
+
+12. BUG FIX: Line 103 | getElementById('alphabet').html should be .innerHTML since we're replacing the string inside | replace ".html" with ".innerHTML"
+
+13. BUG FIX: Line 107 |  generateLetter() function called is missing an "s" and should be "generateLetters()" | added the missing "s"
+
+14. BUG FIX: Lines 109 - 113 | leftover "clicked" class still present on letter buttons after resetting the game; need to remove the added "clicked" class | added a for loop to remove the "clicked" class from the classList of all HTML buttons
+
+15. BUG FIX: Lines 171-176 | game does not end when out of guesses (i.e. guess #9), it just keeps allowing you to continue guessing and clicking buttons until you win | set up a "confirm()" message and similar restart setup to the checkForWin function under a new case #9
 
