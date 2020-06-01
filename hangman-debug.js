@@ -18,6 +18,7 @@ window.load = () => {
 }
 
 let wordToGuess;
+let wordLength;
 incorrectGuesses = 0;
 
 // Picks a word from the word bank that the player must guess
@@ -27,6 +28,8 @@ const pickRandomWord = () => {
         'guarded', 'parsimonious', 'decorous', 'domineering', 'impossible'];
     const randomNum = Math.floor(Math.random() * 16);
     wordToGuess = wordBank(randomNum);
+    wordLength = wordToGuess.length;
+    console.log(wordLength);
     // Creates blanks which match the length of the randomly selected word
     createBlanks(wordToGuess.length);
 }
@@ -35,7 +38,7 @@ const pickRandomWord = () => {
 // and found letters
 const createBlanks = (wordLength) => {
     let wordEl = document.getElementById('word');
-    for (let i = 1; i < wordLength; i++) {
+    for (let i = 0; i < wordLength; i++) {
         let newBlank = document.createElement('span');
         newBlank.className = 'word-letter';
         newBlank.innerText = '_';

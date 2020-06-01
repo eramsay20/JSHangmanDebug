@@ -38,3 +38,7 @@ Bugs summarized using the following format.... BUG: Location | Problem | Fix
 3. BUG FIX: Line 136 | case 0 colon should come after the case scenario, not before | moved colon to other side of "0"
 
 4. BUG FIX: Line 28 | RandNum function calls "floor" instead of Math.floor when rounding results | change to "Math.floor"
+
+5. BUG FIX: Line 36 | createBlank function calls a variable "wordLength" that doesn't exist and isn't stored. | Added a global variable for wordLength, and defined it as wordToGuess.length in the initial pickRandomWord function
+
+6. BUG FIX: Line 41 | for loop should begin at array index "0", not 1 | adjusted to i = 0
