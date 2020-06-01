@@ -12,13 +12,12 @@ the README named “Changelog”. For each bug write the line number and a brief
 of the issue in your “Changelog”.
 */
 
-window.load = () => {
+window.onload = () => {
     pickRandomWord();
     generateLetters();
 }
 
 let wordToGuess;
-let wordLength;
 incorrectGuesses = 0;
 
 // Picks a word from the word bank that the player must guess
@@ -27,9 +26,7 @@ const pickRandomWord = () => {
         'capricious', 'magnificient', 'infamous', 'disillusioned', 'serious', 'unarmed',
         'guarded', 'parsimonious', 'decorous', 'domineering', 'impossible'];
     const randomNum = Math.floor(Math.random() * 16);
-    wordToGuess = wordBank(randomNum);
-    wordLength = wordToGuess.length;
-    console.log(wordLength);
+    wordToGuess = wordBank[randomNum];
     // Creates blanks which match the length of the randomly selected word
     createBlanks(wordToGuess.length);
 }
@@ -49,14 +46,14 @@ const createBlanks = (wordLength) => {
 
 // Generates the letter buttons that are used to guess the word
 const generateLetters = () => {
-    let alphabetEl = document.getElementsByClassName('alphabet');
+    let alphabetEl = document.getElementById('alphabet');
     let start = 'a'.charCodeAt(0);
     let last = 'z'.charCodeAt(0);
     for (let i = start; i <= last; i++) {
         let newBtn = document.createElement('button');
         newBtn.className = 'letter';
         newBtn.innerText = String.fromCharCode(i);
-        newBtn.addEventListener('onclick', onLetterClick);
+        newBtn.addEventListener('click', onLetterClick);
         alphabetEl.appendChild(newBtn);
     }
 }
@@ -77,7 +74,7 @@ const handleIncorrectGuess = (guesses) => {
 
 // Called on each letter click, even if it has already been selected
 const onLetterClick = (event) => {
-    let letter = event.target.text;
+    let letter = event.target.textContent;
     let position = 0;
     // Add the clicked class to change the styling
     event.target.classList.add('clicked');
@@ -95,7 +92,7 @@ const onLetterClick = (event) => {
     } else {
         // If the letter is not found, increment the guesses
         incorrectGuesses++;
-        handleIncorrectGuess(incorrectGuesses);
+        drawHangman(incorrectGuesses);
     }
 }
 

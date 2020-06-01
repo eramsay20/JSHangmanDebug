@@ -39,6 +39,19 @@ Bugs summarized using the following format.... BUG: Location | Problem | Fix
 
 4. BUG FIX: Line 28 | RandNum function calls "floor" instead of Math.floor when rounding results | change to "Math.floor"
 
-5. BUG FIX: Line 36 | createBlank function calls a variable "wordLength" that doesn't exist and isn't stored. | Added a global variable for wordLength, and defined it as wordToGuess.length in the initial pickRandomWord function
+5. BUG FIX: Line 15 | Windows.load should be windows.onload | changed to "onload"
 
-6. BUG FIX: Line 41 | for loop should begin at array index "0", not 1 | adjusted to i = 0
+6. BUG FIX: Line 29 | wordBank is not a function, but rather an array. Should use [] notation to pull out a specific array item | change to "wordToGuess = wordBank[randomNum]; 
+
+7. BUG FIX: Line 41 | for loop should begin at array index "0", not 1 | adjusted to i = 0
+
+8. BUG FIX: Line 49 | calls for alphabet class name, when its an ID in HTML | changed to getElementById instead
+
+<!-- FIXES 1- 8 ABOVE ALLOW FULL PAGE TO LOAD WITH BLANKS AND ALPHABET BUTTON -->
+9. BUG FIX: Line 56 | event listener event defined as| "onclick" when it should be "click" | changed event parameter to "click"
+
+9.  BUG FIX: Line 77 | letter variable should pull .textContent instead of .text | fixed to textContent
+
+10. Bug Fix: Line 95 | handleIncorrectGuess(incorrectGuesses) is not a defined function, should be drawHangman, which is called after every incorrect guess | switched "handleIncorrectGuess" with "drawHangman"
+
+
