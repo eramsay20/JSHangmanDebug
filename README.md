@@ -34,3 +34,5 @@ Bugs summarized using the following format.... BUG: Location | Problem | Fix
 1.  BUG: Line 36 | Missing = in const declaration | Added an equalizer between the const declaration and the following arrow function
 
 2. BUG: Line 94 | count+1 function missing a 2nd '+' character | Added second '+' symbol to correct the add count function
+
+3. BUG FIX: Line 136 | case 0 colon should come after the case scenario, not before | moved colon to other side of "0"

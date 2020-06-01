@@ -133,7 +133,7 @@ const drawHangman = (guesses) => {
     if (canvas.getContext) {
         let ctx = canvas.getContext('2d');
         switch (guesses) {
-            case: 0
+            case 0:
                 // Clears the canvas
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 break;
