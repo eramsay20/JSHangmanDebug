@@ -91,7 +91,7 @@ const onLetterClick = (event) => {
         checkForWin();
     } else {
         // If the letter is not found, increment the guesses
-        incorrectGuesses+;
+        incorrectGuesses++;
         handleIncorrectGuess(incorrectGuesses);
     }
 }
