@@ -1,0 +1,46 @@
+:root {
+	--main-blue: rgb(190, 220, 255);
+}
+
+#canvas {
+	border: var(--main-blue) dashed 2px;
+	margin: 15px;
+	padding: 15px;
+}
+
+#word {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+}
+
+.letter {
+	background-color: black;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	font-size: 25px;
+	margin: 0 2px;
+	outline: none;
+}
+
+.letter.clicked {
+	background-color: var(--main-blue);
+}
+
+.word-letter {
+	font-size: 40px;
+	padding: 4px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+}
+
+body {
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
