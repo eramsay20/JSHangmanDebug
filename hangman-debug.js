@@ -1,3 +1,17 @@
+/* 
+Exercise Instructions:
+For this exercise, you will practice the debugging skills you learned to fix an 
+application. Fork the debugging hangman template​ into your training folder. Your 
+task is to fix all of the bugs to get the game working again. The errors could be 
+syntax errors, runtime errors, or logic errors.
+
+Requirements:
+1. Find and fix 15 bugs in the hangman project.
+2. Read the README.md file included with the Hangman project. Then create a section in
+the README named “Changelog”. For each bug write the line number and a brief description 
+of the issue in your “Changelog”.
+*/
+
 window.load = () => {
     pickRandomWord();
     generateLetters();
