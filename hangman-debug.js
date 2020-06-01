@@ -25,7 +25,7 @@ const pickRandomWord = () => {
     const wordBank = ['elephant', 'humorous', 'stereotyped', 'ambiguous', 'transport',
         'capricious', 'magnificient', 'infamous', 'disillusioned', 'serious', 'unarmed',
         'guarded', 'parsimonious', 'decorous', 'domineering', 'impossible'];
-    const randomNum = floor(Math.random() * 16);
+    const randomNum = Math.floor(Math.random() * 16);
     wordToGuess = wordBank(randomNum);
     // Creates blanks which match the length of the randomly selected word
     createBlanks(wordToGuess.length);
