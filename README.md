@@ -25,3 +25,13 @@ Get into the habit of writing a README for every program you write. The more pra
 [dillinger.io](https://dillinger.io/) - preview your README in browser
 
 [Purdue OWL](https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/index.html) - tips and tricks for keeping your writing concise and impactful.
+
+## ChangeLog
+<!--  For each bug write the line number and a brief description 
+of the issue in your “Changelog”. -->
+
+1.  Location: Line 36
+    Problem: Missing = in const declaration
+    Fix: Added an equalizer between the const declaration and the following arrow function
+
+2. 

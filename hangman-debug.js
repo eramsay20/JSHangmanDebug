@@ -33,7 +33,7 @@ const pickRandomWord = () => {
 
 // Creates the blanks that are used to display word length
 // and found letters
-const createBlanks (wordLength) => {
+const createBlanks = (wordLength) => {
     let wordEl = document.getElementById('word');
     for (let i = 1; i < wordLength; i++) {
         let newBlank = document.createElement('span');
